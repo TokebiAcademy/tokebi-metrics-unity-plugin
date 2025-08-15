@@ -1,0 +1,26 @@
+{
+  "name": "com.tokebi.analytics",
+  "version": "2.0.0",
+  "displayName": "Tokebi Analytics",
+  "description": "Production-ready analytics SDK with batched event tracking for Unity games",
+  "unity": "2020.3",
+  "unityRelease": "0f1",
+  "documentationUrl": "https://github.com/TokebiAcademy/tokebi-metrics-unity-plugin#readme",
+  "changelogUrl": "https://github.com/TokebiAcademy/tokebi-metrics-unity-plugin/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/TokebiAcademy/tokebi-metrics-unity-plugin/blob/main/LICENSE",
+  "keywords": [
+    "analytics",
+    "tracking",
+    "telemetry",
+    "game-analytics",
+    "tokebi",
+    "metrics"
+  ],
+  "author": {
+    "name": "Tokebi Academy",
+    "email": "support@tokebi.com",
+    "url": "https://tokebi.com"
+  },
+  "type": "library",
+  "hideInEditor": false
+}
