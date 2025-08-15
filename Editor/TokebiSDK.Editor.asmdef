@@ -1,0 +1,14 @@
+{
+    "name": "TokebiSDK.Editor",
+    "rootNamespace": "Tokebi",
+    "references": ["TokebiSDK.Runtime"],
+    "includePlatforms": ["Editor"],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
