@@ -24,23 +24,44 @@ An analytics SDK for Unity games to connect with Tokebi Metrics backend.
 
 ## 📦 Installation
 
-### Tokebi Unity Plugin — Quick Setup Steps
+### Tokebi Unity Plugin — Setup Methods
 
-#### Method 1: Package Manager (Recommended - v2.0)
+#### Method 1: Package Manager (Recommended - v2.0 Batched)
 
 1. Open Unity → **Window → Package Manager**
 2. Click **"+" → "Add package from git URL"**
 3. Enter: `https://github.com/TokebiAcademy/tokebi-metrics-unity-plugin.git`
 4. Unity installs automatically
+5. **Tools → Tokebi → Setup Analytics** to configure
 
-#### Method 2: Classic Installer
+**✅ Gets you:** v2.0 batched SDK (production-ready)
 
-1. **Download Installer** - Get the installer script from: [https://tokebimetrics.com/documentation-guide/unity-plugin-guide] or use this repo
-2. **Add Installer to Project** - Copy the file `TokebiInstaller.cs` into the `Assets/Editor/` folder of your Unity project
-3. **Run Installer** - In Unity, go to **Tools → Install Tokebi Analytics SDK**. Enter your API key and click "Install SDK"
-4. **Add to Scene** - Go to **GameObject → Tokebi → Create Analytics SDK** to add the analytics system to your scene
+#### Method 2: Manual Installation (v2.0 Batched)
 
-#### Method 3: Via manifest.json
+1. **Download** this repository as ZIP or clone it
+2. **Create folders** in Unity: `Assets/Tokebi/` and `Assets/Tokebi/Editor/`
+3. **Copy files**:
+   ```
+   Runtime/TokebiSDK.cs → Assets/Tokebi/TokebiSDK.cs
+   Runtime/TokebiSDK.Runtime.asmdef → Assets/Tokebi/TokebiSDK.Runtime.asmdef
+   Editor/TokebiInstaller.cs → Assets/Tokebi/Editor/TokebiInstaller.cs  
+   Editor/TokebiMenu.cs → Assets/Tokebi/Editor/TokebiMenu.cs
+   Editor/TokebiSDK.Editor.asmdef → Assets/Tokebi/Editor/TokebiSDK.Editor.asmdef
+   ```
+4. **GameObject → Tokebi → Create Analytics SDK** and set API key
+
+**✅ Gets you:** v2.0 batched SDK (production-ready)
+
+#### Method 3: Classic Installer (v1.0 Basic)
+
+1. **Download Installer** from: [https://tokebimetrics.com/documentation-guide/unity-plugin-guide]
+2. **Add to Project** - Copy `TokebiInstaller.cs` into `Assets/Editor/` folder
+3. **Run Installer** - Go to **Tools → Install Tokebi Analytics SDK**, enter API key, click "Install SDK"
+4. **Add to Scene** - **GameObject → Tokebi → Create Analytics SDK**
+
+**⚠️ Gets you:** v1.0 basic SDK (immediate event sending, not optimized for high-frequency tracking)
+
+#### Method 4: Via manifest.json (v2.0 Batched)
 
 Add to `Packages/manifest.json`:
 
@@ -51,6 +72,8 @@ Add to `Packages/manifest.json`:
   }
 }
 ```
+
+**✅ Gets you:** v2.0 batched SDK (production-ready)
 
 ## 🔧 Setup
 
