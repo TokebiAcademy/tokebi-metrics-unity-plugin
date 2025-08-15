@@ -32,7 +32,7 @@ namespace Tokebi
         public string apiKey = ""; // Set this in inspector or via code
         
         private const string ENDPOINT = "https://tokebi-api.vercel.app";
-        private const float FLUSH_INTERVAL = 60f; // 1 minute like Unity Analytics
+        private const float FLUSH_INTERVAL = 30f; // 1 minute like Unity Analytics
         private const int MAX_BATCH_SIZE = 100;
         private const int MAX_QUEUE_SIZE = 1000; // Prevent memory issues
 
