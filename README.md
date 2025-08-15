@@ -11,7 +11,7 @@ An analytics SDK for Unity games to connect with Tokebi Metrics backend.
 - **Cross-platform compatibility**
 
 ### v2.0 Performance Features
-- **60-second batching** (like Unity Analytics)
+- **30-second batching** (like Unity Analytics)
 - **Minimal memory allocations** 
 - **Object pooling** for network requests
 - **Console/mobile optimized**
