@@ -52,16 +52,7 @@ An analytics SDK for Unity games to connect with Tokebi Metrics backend.
 
 **✅ Gets you:** v2.0 batched SDK (production-ready)
 
-#### Method 3: Classic Installer (v1.0 Basic)
-
-1. **Download Installer** from: [https://tokebimetrics.com/documentation-guide/unity-plugin-guide]
-2. **Add to Project** - Copy `TokebiInstaller.cs` into `Assets/Editor/` folder
-3. **Run Installer** - Go to **Tools → Install Tokebi Analytics SDK**, enter API key, click "Install SDK"
-4. **Add to Scene** - **GameObject → Tokebi → Create Analytics SDK**
-
-**⚠️ Gets you:** v1.0 basic SDK (immediate event sending, not optimized for high-frequency tracking)
-
-#### Method 4: Via manifest.json (v2.0 Batched)
+#### Method 3: Via manifest.json (v2.0 Batched)
 
 Add to `Packages/manifest.json`:
 
