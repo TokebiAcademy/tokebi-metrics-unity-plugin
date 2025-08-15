@@ -197,7 +197,7 @@ tokebi-metrics-unity-plugin/
 ## 🔄 Changelog
 
 ### v2.0.0
-- Added batched event tracking (60-second intervals)
+- Added batched event tracking (30-second intervals)
 - Object pooling for network requests
 - String caching to minimize allocations
 - 95%+ reduction in GC pressure
