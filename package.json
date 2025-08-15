@@ -2,7 +2,7 @@
   "name": "com.tokebi.analytics",
   "version": "2.0.0",
   "displayName": "Tokebi Analytics",
-  "description": "Production-ready analytics SDK with batched event tracking for Unity games",
+  "description": "Production-ready analytics SDK with batched event tracking for Unity games. Features 60-second batching, minimal memory allocations, and console/mobile optimization.",
   "unity": "2020.3",
   "unityRelease": "0f1",
   "documentationUrl": "https://github.com/TokebiAcademy/tokebi-metrics-unity-plugin#readme",
@@ -14,7 +14,9 @@
     "telemetry",
     "game-analytics",
     "tokebi",
-    "metrics"
+    "metrics",
+    "batching",
+    "performance"
   ],
   "author": {
     "name": "Tokebi Academy",
