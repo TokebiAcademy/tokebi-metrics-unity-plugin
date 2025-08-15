@@ -49,7 +49,6 @@ namespace Tokebi
         // Pre-allocated objects to minimize GC
         private StringBuilder jsonBuilder = new StringBuilder(8192);
         private UnityWebRequest pooledRequest;
-        private UploadHandlerRaw pooledUploadHandler;
         private DownloadHandlerBuffer pooledDownloadHandler;
         
         // Cached strings to avoid allocations
@@ -103,10 +102,8 @@ namespace Tokebi
         {
             // Create reusable network objects
             pooledRequest = new UnityWebRequest();
-            pooledUploadHandler = new UploadHandlerRaw(new byte[0]);
             pooledDownloadHandler = new DownloadHandlerBuffer();
             
-            pooledRequest.uploadHandler = pooledUploadHandler;
             pooledRequest.downloadHandler = pooledDownloadHandler;
         }
 
@@ -298,8 +295,13 @@ namespace Tokebi
             pooledRequest.url = ENDPOINT + "/api/track";
             pooledRequest.method = "POST";
             
+            // Create new upload handler each time (can't reuse)
             byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(batchJson);
-            pooledUploadHandler.data = bodyRaw;
+            if (pooledRequest.uploadHandler != null)
+            {
+                pooledRequest.uploadHandler.Dispose();
+            }
+            pooledRequest.uploadHandler = new UploadHandlerRaw(bodyRaw);
             
             pooledRequest.SetRequestHeader("Authorization", apiKey);
             pooledRequest.SetRequestHeader("Content-Type", "application/json");
@@ -428,6 +430,10 @@ namespace Tokebi
             // Clean up pooled objects
             if (pooledRequest != null)
             {
+                if (pooledRequest.uploadHandler != null)
+                {
+                    pooledRequest.uploadHandler.Dispose();
+                }
                 pooledRequest.Dispose();
             }
         }
